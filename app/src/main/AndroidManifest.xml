@@ -24,6 +24,18 @@
             android:name=".InvalidMessage"
             android:label="@string/title_activity_invalid_message" >
         </activity>
+        <activity
+            android:name=".PersonActivity"
+            android:label="@string/title_activity_person" >
+        </activity>
+        <activity
+            android:name=".DatabaseActivity"
+            android:label="@string/title_activity_database" >
+        </activity>
+        <activity
+            android:name=".AddPersonActivity"
+            android:label="@string/title_activity_add_person" >
+        </activity>
     </application>
 
 </manifest>

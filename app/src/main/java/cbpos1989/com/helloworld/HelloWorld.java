@@ -56,8 +56,8 @@ public class HelloWorld extends AppCompatActivity {
             it.putExtra(HelloWorld.USER_NAME_KEY, name);
             startActivity(it);
         } else if (name.equalsIgnoreCase("Database")) {
-            //Intent it = new Intent(this,new activity);
-            //startActivity(it);
+            Intent it = new Intent(this,DatabaseActivity.class);
+            startActivity(it);
         } else {
             Intent it = new Intent(this,InvalidMessage.class);
             it.putExtra(HelloWorld.USER_NAME_KEY,name);

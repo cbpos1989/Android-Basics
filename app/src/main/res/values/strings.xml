@@ -4,6 +4,8 @@
 
     <string name="title">Hello World</string>
     <string name="enter_name">Enter Name</string>
+    <string name="enter_phone">Enter Phone Number</string>
+    <string name="enter_email">Enter Email</string>
     <string name="ok_button">OK</string>
     <string name="valid_message">Happy Birthday</string>
     <string name="invalid_message">Greetings</string>
@@ -13,4 +15,18 @@
     <string name="title_activity_invalid_message">InvalidMessage</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_person">PersonActivity</string>
+
+    <string name="person">Person</string>
+    <string name="person_name">Name: </string>
+    <string name="person_phone">Phone Number: </string>
+    <string name="person_email">Email: </string>
+
+    <string name="title_activity_database">DatabaseActivity</string>
+    <string name="button_add_text">Add</string>
+    <string name="button_remove_text">Remove</string>
+    <string name="button_submit_text">Submit</string>
+
+    <string name="title_activity_add_person">AddPersonActivity</string>
+    <string name="add_person_desc">Enter details into fields and then click submit</string>
 </resources>

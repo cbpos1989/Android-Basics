@@ -43,18 +43,21 @@ public class HelloWorld extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onNewButtonClicked(View view){
+    public void onNewButtonClicked(View view) {
 
-        EditText editText = (EditText)findViewById(R.id.enter_name_field);
+        EditText editText = (EditText) findViewById(R.id.enter_name_field);
         name = editText.getText().toString().trim();
 
 
         Toast.makeText(getApplicationContext(), "Welcome to the App " + name, Toast.LENGTH_LONG).show();
 
-        if(name.equalsIgnoreCase(PASS_NAME)){
+        if (name.equalsIgnoreCase(PASS_NAME)) {
             Intent it = new Intent(this, ValidMessageActivity.class);
-            it.putExtra(HelloWorld.USER_NAME_KEY,name);
+            it.putExtra(HelloWorld.USER_NAME_KEY, name);
             startActivity(it);
+        } else if (name.equalsIgnoreCase("Database")) {
+            //Intent it = new Intent(this,new activity);
+            //startActivity(it);
         } else {
             Intent it = new Intent(this,InvalidMessage.class);
             it.putExtra(HelloWorld.USER_NAME_KEY,name);

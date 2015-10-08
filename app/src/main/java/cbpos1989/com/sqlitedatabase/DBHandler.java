@@ -101,7 +101,7 @@ public class DBHandler {
         mDatabase = mDBOpenHelper.getWritableDatabase();
 
         mDatabase.execSQL("DELETE FROM " + DBFeederContract.PersonTable.TABLE_NAME
-                            + " WHERE " + DBFeederContract.PersonTable._ID + " = " + id, null);
+                            + " WHERE " + DBFeederContract.PersonTable._ID + " = " + id);
 
         mDatabase.close();
         mDBOpenHelper.close();

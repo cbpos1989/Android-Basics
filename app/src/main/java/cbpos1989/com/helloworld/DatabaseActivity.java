@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -73,9 +74,24 @@ public class DatabaseActivity extends ListActivity {
         startActivityForResult(intent,1);
     }
 
+
     public void onAddClicked(View view){
         Intent intent = new Intent(this,AddPersonActivity.class);
         startActivityForResult(intent,1);
+    }
+
+    public void onRemoveClicked(View view){
+        DBHandler dbHandler = new DBHandler(getApplicationContext());
+
+        for (Person p: people) {
+            dbHandler.removePerson(p.getId());
+        }
+
+        initListView();
+    }
+
+    public void onSubmitClicked(View view){
+        Toast.makeText(this,"Submit functionality not yet implemented",Toast.LENGTH_SHORT).show();
     }
 
     protected void onActivityResult(int requestCode, int resultCode,Intent data){

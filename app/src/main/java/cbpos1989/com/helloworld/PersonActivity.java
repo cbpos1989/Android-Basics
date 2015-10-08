@@ -25,7 +25,7 @@ public class PersonActivity extends AppCompatActivity {
         String name = intent.getStringExtra("PERSON_NAME");
         String phone = intent.getStringExtra("PERSON_PHONE");
         String email = intent.getStringExtra("PERSON_EMAIL");
-        int id = intent.getIntExtra("PERSON_ID",0);
+        int id = intent.getIntExtra("PERSON_ID",1);
 
         TextView name_field = (TextView) findViewById(R.id.person_name_field);
         TextView phone_field = (TextView) findViewById(R.id.person_phone_field);
@@ -40,9 +40,13 @@ public class PersonActivity extends AppCompatActivity {
 
     public void onRemoveClicked(View view){
         DBHandler dbHandler = new DBHandler(getApplicationContext());
-        dbHandler.removePerson(person.getId());
-        setResult(1);
-        finish();
+
+
+        if (person != null) {
+            dbHandler.removePerson(person.getId());
+            setResult(1);
+            finish();
+        }
     }
 
     @Override
